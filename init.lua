@@ -27,6 +27,12 @@ return {
   },
 
   lsp = {
+    config = {
+      clangd = {
+        -- disable infinite popups for clangd lsp
+        capabilities = { offsetEncoding = "utf-8" }
+      },
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -63,6 +69,10 @@ return {
         disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
       },
     },
+  },
+
+  plugins = {
+    { "mfussenegger/nvim-dap", enabled = true },
   },
 
   -- This function is run last and is a good place to configuring
